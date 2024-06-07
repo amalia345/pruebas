@@ -1,5 +1,3 @@
-//Funcion que calcule el promedio de los elementos que se encuentren en un arreglo 
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -16,6 +14,8 @@ void ImpArrInt(int, int[]);
 int EstaEn(int,int, int[]);
 float Promedio(int[], int);
 void Invierte(int[], int );
+void Descendente(int, int, int[]);
+
 
 int main(){
    int n, x, p,maximo, nums[200],nums2[200],m,k,l,q,i;
@@ -27,22 +27,25 @@ int main(){
    
    puts("\nDesordenados: ");// puts es como imprimir  
    ImpArrInt(n, nums);
+   
+
+
+
+
+   //= Menor(nums,0,n-1);
+   //printf("El numero menor del arreglo es a[%d]=%d\t",q,nums[q]);
+    Selection(nums,n);
+    puts("\nordenados: ");
+ 
+   ImpArrInt(n, nums);
+   
    s=Promedio(nums, n);
    printf("\n El promedio de loconjunto de valores es %f\n",s);
    Invierte(nums, n);
-   puts("\nInvertidos: ");// puts es como imprimir  
+   //puts("\nInvertidos: ");// puts es como imprimir  
+   puts("\nDescendentemente: ");// puts es como imprimir  
    ImpArrInt(n, nums);
-
-
-
-
-   /*q = Menor(nums,0,n-1);
-   printf("El numero menor del arreglo es a[%d]=%d\t",q,nums[q]);
-   Selection(nums,n);
-   //puts("\nDesordenados: ");
-   ImpArrInt(n, nums);
-   
-   
+      /*
    
    
    
@@ -208,6 +211,7 @@ void Intercambia(int a[],int i,int j){
 
 };
 
+//SelectionOrdena acendentemente
 void Selection(int a[], int n){
 int k,i;
  for(i=0;i<=n-1;i++){
@@ -238,6 +242,12 @@ void Invierte(int a[], int i){
     }
 }
 
+//Ordenar descendentemente
+void Descendente(int i, int n, int a[]){
+    Selection( a[i],  n);
+    Invierte( a[i], i);
+
+}
 
 
 
