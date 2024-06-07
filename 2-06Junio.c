@@ -5,22 +5,26 @@
 #include<time.h>
 void LlenaRand(int, int, int[]);
 void ImpArrInt(int, int[]);
-void Seleccion(int, int, int[]);
+void Seleccion(int, int);
 void Intercambia(int, int[]);
 int Menor(int[], int, int);
 
+
 int main(){
 
-   int n, m, x, p,maximo, nums[200], nums2[200];
+   int n, m, x, p, a,maximo, nums[200], nums2[200];
    printf("Dame el numero de elementos y el valor maximo!!!\t");
    scanf("%d%d", &n, &maximo);
 
    LlenaRand(n, maximo, nums);
+   printf("\n");
    ImpArrInt(n, nums);
+   
    x= Menor(nums, 0,n-1);
    printf("a[%d]=%d.\n",x,nums[x]);
    Seleccion(n, nums);
-   Intercambia(n, nums);
+   printf("\n");
+   mpArrInt(n, nums);
 
    printf("\n") 
    return 0;
@@ -51,17 +55,16 @@ int Menor (int a[], int p, int u){
                 m=a[i];
                 j=i;
             }
-        
-        }
         return j;
-    }
+        }
     return 0;
-}
+    }
 
 void Seleccion(int a[], int n){
+    int i;
     for ( i = 0; i < n-1; i++)
     {
-        k=Menor(a,i,n-1);
+        x=Menor(a,i,n-1);
         intercambia(a, i, k);
     }
     
