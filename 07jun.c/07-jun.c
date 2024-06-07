@@ -15,6 +15,8 @@ void AcomoArr(int, int[]);
 void ImpArrInt(int, int[]);
 int EstaEn(int,int, int[]);
 float Promedio(int[], int);
+void Invierte(int[], int );
+
 int main(){
    int n, x, p,maximo, nums[200],nums2[200],m,k,l,q,i;
    float s; 
@@ -27,12 +29,14 @@ int main(){
    ImpArrInt(n, nums);
    s=Promedio(nums, n);
    printf("\n El promedio de loconjunto de valores es %f\n",s);
+   Invierte(nums, n);
+   puts("\nInvertidos: ");// puts es como imprimir  
+   ImpArrInt(n, nums);
 
 
 
 
-
-   q = Menor(nums,0,n-1);
+   /*q = Menor(nums,0,n-1);
    printf("El numero menor del arreglo es a[%d]=%d\t",q,nums[q]);
    Selection(nums,n);
    //puts("\nDesordenados: ");
@@ -61,6 +65,7 @@ int main(){
    //ImpArrInt(n, nums);
    //p=EstaEn(x, n, nums);
    //printf("\nEl numero mayor del arreglo es %d \n",  p);
+   */
  
    return 0;
 }
@@ -212,8 +217,8 @@ int k,i;
 };
 
 //Funcion que calcule el promedio de los elementos que se encuentren en un arreglo 
-float Pormedio(int a[], int n){
-    float s;
+float Promedio(int a[], int n){
+    float s=0;
     int i; 
     for(i=0; i<n; i++){
        s=s+a[i];
@@ -221,6 +226,18 @@ float Pormedio(int a[], int n){
     s=s/n;
     return s;
 }
+
+void Invierte(int a[], int i){
+    int t, j;
+    j=i-1;
+    for(i=0; i<j; i++){
+        t= a[i];
+        a[i]=a[j];
+        a[j]=t;
+        j=j-1;
+    }
+}
+
 
 
 
