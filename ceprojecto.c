@@ -202,7 +202,7 @@ int k,i;
 };
 
 
-//Funcion que calcule el promedio de los elementos que se encuentren en un arreglo 
+
 
 
 
