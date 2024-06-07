@@ -61,10 +61,10 @@ int Menor (int a[], int p, int u){
     }
 
 void Seleccion(int a[], int n){
-    int i;
+    int i, k;
     for ( i = 0; i < n-1; i++)
     {
-        x=Menor(a,i,n-1);
+        k=Menor(a,i,n-1);
         intercambia(a, i, k);
     }
     
@@ -139,15 +139,16 @@ int Menor (int a[], int p, int u){
     }
 
 void Seleccion(int a[], int n){
-    int i;
+    int i, k;
     for ( i = 0; i < n-1; i++)
     {
-        x=Menor(a,i,n-1);
+        k=Menor(a,i,n-1);
         intercambia(a, i, k);
     }
     
 }
 void Intercambia(int a[], int i, int j){
+    int i, t;
     int t=a[i];
     a[i]=a[i];
 }
