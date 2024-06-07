@@ -1,4 +1,5 @@
-//DIEGO
+//Funcion que calcule el promedio de los elementos que se encuentren en un arreglo 
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -13,15 +14,24 @@ void LlenaRand(int, int,int[]);
 void AcomoArr(int, int[]);
 void ImpArrInt(int, int[]);
 int EstaEn(int,int, int[]);
+float Promedio(int[], int);
 int main(){
-   int n, x, p,maximo, nums[200],nums2[200],m,k,l,q;
+   int n, x, p,maximo, nums[200],nums2[200],m,k,l,q,i;
+   float s; 
    printf("Dame el numero de elementos y el valor maximo!!!\t");
    scanf("%d%d", &n, &maximo);
 
    LlenaRand(n, maximo, nums);
    
-   //puts("\nDesordenados: ");
+   puts("\nDesordenados: ");// puts es como imprimir  
    ImpArrInt(n, nums);
+   s=Promedio(nums, n);
+   printf("\n El promedio de loconjunto de valores es %f\n",s);
+
+
+
+
+
    q = Menor(nums,0,n-1);
    printf("El numero menor del arreglo es a[%d]=%d\t",q,nums[q]);
    Selection(nums,n);
@@ -201,9 +211,16 @@ int k,i;
  }
 };
 
-
 //Funcion que calcule el promedio de los elementos que se encuentren en un arreglo 
-
+float Pormedio(int a[], int n){
+    float s;
+    int i; 
+    for(i=0; i<n; i++){
+       s=s+a[i];
+    }
+    s=s/n;
+    return s;
+}
 
 
 
