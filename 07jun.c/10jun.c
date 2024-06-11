@@ -1,48 +1,64 @@
-#include<stdio.h>
-int Bin_a_Dec(int);
-int Dec_a_Bin(int);
+#include <stdio.h>
 
-int main()
-{
-    //dame el numero binario 
-    int dos, diez=0, pdos=1, bin;
-    while (1)
-    {
-        printf("Ingresa el numero ");
-        scanf("%d", &dos);
-        
-        
+int convertirBinarioADecimal(int numeroBinario);
+int convertirDecimalABinario(int numeroDecimal);
 
-        //Bin_a_Dec(dos);
-        //bin=Bin_a_Dec(diez);
-        //printf("\nEl resultado de binario a decimal es: ,%d", bin);
-        bin=Dec_a_Bin(dos);
-        printf("\nEl resultado de decimal a binario es: ,%d", );
+int main() {
+  int opcion, numeroIngresado, resultadoConversion;
 
+  while (1) {
+    printf("1. Convertir binario (de 0 a 111111111) a decimal\n");
+    printf("2. Convertir decimal (de 0 a 1023) a binario\n");
+    printf("3. Salir\nElige una opción: ");
+    scanf("%d", &opcion);
+
+    if (opcion == 3) {
+      break;
     }
-    
-    return 0;
+
+    printf("Ingresa el número: ");
+    scanf("%d", &numeroIngresado);
+
+    if (opcion == 1) {
+      resultadoConversion = convertirBinarioADecimal(numeroIngresado);
+      printf("El resultado de binario a decimal es: %d\n", resultadoConversion);
+    } else if (opcion == 2) {
+      resultadoConversion = convertirDecimalABinario(numeroIngresado);
+      printf("El resultado de decimal a binario es: %d\n", resultadoConversion);
+    } else {
+      printf("Opción no válida\n");
+    }
+  }
+
+  return 0;
 }
-int Bin_a_Dec(int dos){
-    int diez=0, pdos=1;
+//Funcion a decimal
+int convertirBinarioADecimal(int numeroBinario) {
+  int numeroDecimal = 0, potenciaDeDos = 1;
 
-    while (dos>0)
-    {
-        diez=diez+(dos%2)* pdos;
-        dos=dos/10;
-        pdos=pdos*2,4,8;
-    }
-    return diez;
+  while (numeroBinario > 0) {
+    numeroDecimal = numeroDecimal + (numeroBinario % 10) * potenciaDeDos;
+    numeroBinario = numeroBinario / 10;
+    potenciaDeDos = potenciaDeDos * 2;
+  }
+
+  return numeroDecimal;
 }
-int Dec_a_Bin(int diez){
-    int dos=0, pdiez=1, db;
-    while (diez>0)
-    {
-        db=diez%2;
-        dos=dos + db*pdiez;
-        pdiez=pdiez*10;
-        diez=diez/2;
-    }
-    return dos;
 
+//Funcion a bianrio
+
+
+int convertirDecimalABinario(int numeroDecimal) {
+  int numeroBinario = 0;
+  int potenciaDeDiez = 1;
+  int digitoBinario; // Declaración del dígito binario
+
+  while (numeroDecimal > 0) {
+    digitoBinario = numeroDecimal % 2; // Extraer el dígito binario menos significativo
+    numeroBinario += digitoBinario * potenciaDeDiez; // Sumar el valor del dígito a la potencia correspondiente
+    potenciaDeDiez *= 10; // Multiplicar la potencia de 10 por 10 para la siguiente iteración
+    numeroDecimal /= 2; // Dividir el número decimal por 2 para obtener la parte entera
+  }
+
+  return numeroBinario;
 }
