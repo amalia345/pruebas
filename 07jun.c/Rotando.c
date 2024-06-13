@@ -2,10 +2,11 @@
 void RotaDer(int[], int); //Rotando un array como una cola
 void ImpArrInt(int, int[]);
 void LlenaRand(int, int, int[]);
+void Formar(int[], int, int*);
 
 int main()
 {
-    int n, x, p,maximo, nums[200],nums2[200],m,k,l,q,i;
+    int n, x, p,maximo, nums[200],nums2[200],m,k,l,q,i, a;
     float s;
     printf("Dame el numero de elementos y el valor maximo!!!\t");
     scanf("%d%d", &n, &maximo);
@@ -15,15 +16,22 @@ int main()
 
     puts("\nDesordenados: ");
     ImpArrInt(n, nums);
+
+    printf("\nDame un nuevo valor! \n");
+    puts("\nFormados");
+    Formar("%d", a, x, &n);
+    
+    
+    
     
    
     /*Selection(nums,n);
     puts("\nordenados: ");
     ImpArrInt(n, nums);
     */
-
+    
+      puts("\nRotados: ");
    while(1){
-    puts("\nRotados: ");
        RotaDer(nums, n);
        ImpArrInt(n, nums);
        fflush(stdin);
@@ -63,3 +71,12 @@ void RotaDer(int a[], int n){
 }
 
 //Estudiar buble 
+// EL nombre dek arreglo es un apuntador 
+// x es el elemento nuevo que voy a agregar 
+
+void Formar(int a[], int x, int *n){  //a es una cola circular, asi se comporta array 
+    a[*n]=x;
+    *a=*n+1;
+    RotaDer(a, *n);
+
+}
