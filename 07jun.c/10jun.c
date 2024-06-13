@@ -6,14 +6,14 @@ int convertirDecimalABinario(int numeroDecimal);
 int main() {
   int opcion, numeroIngresado, resultadoConversion;
 
-  while (1) {
+  while (1) { // infinite cycle
     printf("1. Convertir binario (de 0 a 111111111) a decimal\n");
     printf("2. Convertir decimal (de 0 a 1023) a binario\n");
     printf("3. Salir\nElige una opción: ");
     scanf("%d", &opcion);
 
     if (opcion == 3) {
-      break;
+      break; // Break cycle of while
     }
 
     printf("Ingresa el número: ");
@@ -22,7 +22,12 @@ int main() {
     if (opcion == 1) {
       resultadoConversion = convertirBinarioADecimal(numeroIngresado);
       printf("El resultado de binario a decimal es: %d\n", resultadoConversion);
-    } else if (opcion == 2) {
+    } 
+    // CONSTANTE_PI , KEY_API
+    
+    
+    
+    else if (opcion == 2) {
       resultadoConversion = convertirDecimalABinario(numeroIngresado);
       printf("El resultado de decimal a binario es: %d\n", resultadoConversion);
     } else {
@@ -33,8 +38,8 @@ int main() {
   return 0;
 }
 //Funcion a decimal
-int convertirBinarioADecimal(int numeroBinario) {
-  int numeroDecimal = 0, potenciaDeDos = 1;
+int convertirBinarioADecimal(int numeroBinario) { // Argumento que viene de main ( de la funcion) 
+  int numeroDecimal = 0, potenciaDeDos = 1; 
 
   while (numeroBinario > 0) {
     numeroDecimal = numeroDecimal + (numeroBinario % 10) * potenciaDeDos;
@@ -62,3 +67,5 @@ int convertirDecimalABinario(int numeroDecimal) {
 
   return numeroBinario;
 }
+
+
