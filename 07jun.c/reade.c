@@ -6,7 +6,7 @@ int main()
     char pal[100];
     printf("%d", EOF) //EOF End of file con numeros magicos
     //Mientras no encuentre el fin del archivo 
-    while ()
+    whiile (){
     printf("%S")
     
 
@@ -14,6 +14,7 @@ int main()
     
 
     return 0;
+    }
     prinf("%s"); 
     scanf(Ent, "%S\n", pal);
     printf("%S\n", pal);
@@ -23,4 +24,3 @@ int main()
 
 //El numero de retorno de la funcion es el numero de cadenas que pudo leer exitosamente
 //Ordenar cadenas con buble sort 
- 
