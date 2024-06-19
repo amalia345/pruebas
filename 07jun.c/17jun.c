@@ -3,7 +3,7 @@
 int main(int argc, char const *argv[]) //argv donde estan cuandadas los arreglos que escribes en la linea de comando
 {
     int 
-    printf("Argumentos en la linea de comandos: %d\n");
+    printf("Argumentos en la linea de comandos: \n, %d");
     while(--argc)
         
         printf("%s\n", *argv);
