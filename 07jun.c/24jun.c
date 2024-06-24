@@ -20,6 +20,7 @@ int main()
  
 //Crear una variable para porder acceder a distintos campos  
 //Arreglo puede contener varios elementos pero del mismo tipo 
+//Estructura de datos, estudiar un poco pero no mucho 
 
 
 

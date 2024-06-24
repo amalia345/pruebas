@@ -2,7 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 
-struct Pacientes
+struct Pacientes // What is struct? 
 {
     char nombre[30];
     int edad;
