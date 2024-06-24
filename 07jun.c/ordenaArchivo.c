@@ -63,6 +63,10 @@ void Burbuja(char *pals[], int n){
 //Debre de imprimir lo que esta en fuente.txt  
 
 //Regresarlos al archivo 
+//Asumir que tengo que estudiar 
+//Hay que irse a dormir haber hecho la terea
+//Hay que poner de tu parte 
+//Hay que estudiar 
 void Copia_Archivo_Arrego 
 
 
