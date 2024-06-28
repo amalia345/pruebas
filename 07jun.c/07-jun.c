@@ -45,6 +45,9 @@ int main(){
    //puts("\nInvertidos: ");// puts es como imprimir  
    puts("\nDescendentemente: ");// puts es como imprimir  
    ImpArrInt(n, nums);
+
+   AcomoArr(m,nums2);
+   printf("\n numero de elementos filtrados %d\n",m);
       /*
    
    
@@ -101,13 +104,13 @@ for(j=0;j<n-1;j++){
 
 
 
-void ImpArrInt(int n, int nums[]){
+void ImpArrInt(int n, int nums[]){ //argumentos la cantidad de numeros y el arrglo ya llenado
      int i;
      printf("\n--------------------------------------------------------------------------------------\n");
      
      for(i=0; i<n; i++){
-     printf("%d\t", nums[i]);
-     if(i%10==0 && (i>0))
+     printf("%d\t", nums[i]); // \t 4 espacios Agrupa de 10 en 10 
+     if((i+1)%10==0 && (i>0)) //Cada 10 elementos hace un salto de linea
         putchar('\n');
      }
      puts("\n----------------------------------------------------------------------------------------\n");
@@ -213,7 +216,7 @@ void Intercambia(int a[],int i,int j){
 
 //SelectionOrdena acendentemente
 void Selection(int a[], int n){
-int k,i;
+int k,i; //i contador y k-- encuentra al numero menor
  for(i=0;i<=n-1;i++){
    k=Menor(a,i,n-1);
    Intercambia(a,i,k);

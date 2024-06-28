@@ -1,6 +1,6 @@
 #include.<stdio.h>
 
-int main(int argc, char const *argv[]) //argv donde estan cuandadas los arreglos que escribes en la linea de comando
+int main(int argc, char const *argv[]) //argv donde estan guandadas los arreglos que escribes en la linea de comando
 {
     int 
     printf("Argumentos en la linea de comandos: \n, %d");
@@ -19,3 +19,7 @@ int main(int argc, char const *argv[]) //argv donde estan cuandadas los arreglos
 //acceder desde la terminal o encontrar la manera de 
 //crear mi copy.c
 //micopyarch1.txt arch2.txt
+//cuando argc valga 0 ya no se ejecutara el while 
+/// decrementa argc hasta que valga 0
+//while(--argc)
+   // printf("%s\n", argv[])
